@@ -1,6 +1,6 @@
 {
   "resources/js/app.ts": {
-    "file": "assets/app-CdSsUGF2.js",
+    "file": "assets/app-pDXh-btW.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -8,11 +8,11 @@
       "resources/js/pages/ItsARedBarn.vue"
     ],
     "css": [
-      "assets/app-Bp2vNv5M.css"
+      "assets/app-Dk1c3-3F.css"
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-DicuLakr.js",
+    "file": "assets/ItsARedBarn-DixpXip1.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
