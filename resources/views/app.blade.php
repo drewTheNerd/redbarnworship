@@ -22,6 +22,10 @@
         @routes
         @vite(['resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
         @inertiaHead
+
+        <!-- apple styles -->
+        <meta name="theme-color" content="#b1d3e7">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
     </head>
     <body class="antialiased bg-[#b1d3e7]">
         @inertia
