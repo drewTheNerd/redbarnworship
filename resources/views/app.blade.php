@@ -27,7 +27,7 @@
         <meta name="theme-color" content="#b1d3e7">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
     </head>
-    <body class="antialiased bg-[#b1d3e7]">
+    <body class="antialiased">
         @inertia
     </body>
 </html>

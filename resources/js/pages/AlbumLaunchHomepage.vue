@@ -100,4 +100,8 @@ import { Head, Link } from '@inertiajs/vue3';
 .delay-500 { animation-delay: 500ms; }
 .delay-700 { animation-delay: 700ms; }
 .delay-900 { animation-delay: 900ms; }
+
+body {
+    background-color: #7896b4;
+}
 </style>

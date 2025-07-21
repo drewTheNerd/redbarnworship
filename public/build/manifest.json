@@ -1,6 +1,6 @@
 {
   "resources/js/app.ts": {
-    "file": "assets/app-DzMA5IHq.js",
+    "file": "assets/app-B6DPX5eW.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -9,11 +9,11 @@
       "resources/js/pages/ItsARedBarn.vue"
     ],
     "css": [
-      "assets/app-mbjjJzZ3.css"
+      "assets/app-ReUEA2Lg.css"
     ]
   },
   "resources/js/pages/AlbumLaunchHomepage.vue": {
-    "file": "assets/AlbumLaunchHomepage-IEibOt2Z.js",
+    "file": "assets/AlbumLaunchHomepage-97FzF3OZ.js",
     "name": "AlbumLaunchHomepage",
     "src": "resources/js/pages/AlbumLaunchHomepage.vue",
     "isDynamicEntry": true,
@@ -21,11 +21,11 @@
       "resources/js/app.ts"
     ],
     "css": [
-      "assets/AlbumLaunchHomepage-By82M7tp.css"
+      "assets/AlbumLaunchHomepage-COl9ZSvj.css"
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-CJ0YKARC.js",
+    "file": "assets/ItsARedBarn-HO9du2n7.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
