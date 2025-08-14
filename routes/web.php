@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('AlbumLaunchHomepage');
+    return Inertia::render('Linktree');
 })->name('home');
 
 
 Route::get('/album', function () {
-    return Inertia::render('AlbumLaunchHomepage');
+    return Inertia::render('Linktree');
 })->name('album');
 
 
