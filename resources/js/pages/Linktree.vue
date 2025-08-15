@@ -52,6 +52,15 @@ import { Head, Link } from '@inertiajs/vue3';
                     </a>
 
                     <a 
+                        href="https://maps.app.goo.gl/PQNsYXUfY12royyn6"
+                        target="_blank"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
+                    >
+                        <img src="/img/google_maps_icon.jpg" alt="Google Maps" class="w-10 h-10 rounded-full" />
+                        <span class="w-36 group-hover:text-black transition">Directions</span>
+                    </a>
+
+                    <a 
                         href="mailto:redbarnworship@gmail.com"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
@@ -59,6 +68,9 @@ import { Head, Link } from '@inertiajs/vue3';
                         <img src="/img/email_icon.jpg" alt="Email Icon" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Contact</span>
                     </a>
+
+
+                    
 
                     <!-- <a 
                         href="https://open.spotify.com/album/1XTO9M1CWXLMGY0dUcRfnO"
