@@ -8,66 +8,66 @@ import { Head, Link } from '@inertiajs/vue3';
     <div class="relative min-h-dvh">
         <!-- Background -->
         <div
-            class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-            style="background-image: url('/img/background.jpg');"
+            class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-50"
+            style="background-image: url('/img/barn_bg_vertical.jpg');"
         ></div>
 
         <main class="relative z-10">
             <section class="max-w-sm mx-auto p-2">
-                <div class="w-full px-20 py-8">
+                <!-- <div class="w-full px-20 py-8">
                     <img
                         src="/img/album_cover.jpg"
                         alt="Album Cover"
                         class="w-full h-full object-cover rounded-2xl border-4 border-white shadow-md opacity-0 scale-95 animate-fade-in delay-100"
                     />
-                </div>
+                </div> -->
 
-                <div class="w-full text-black text-center">
+                <div class="w-full text-white text-center py-4">
                     <h1 class="text-3xl font-helvetica font-black opacity-0 animate-fade-in delay-300">
                         Red Barn Worship
                     </h1>
                     <p class="text-lg font-helvetica font-regular opacity-0 animate-fade-in delay-300">
-                        Student led worship group in Auburn, AL.
+                        Next Worship Night: <br> 7pm, Friday, August 22nd at The Red Barn!
                     </p>
                 </div>
 
                 <div class="w-full text-black text-center px-12 mt-4 space-y-3">
 
                     <a 
-                        href="https://open.spotify.com/album/1XTO9M1CWXLMGY0dUcRfnO"
+                        href="https://www.instagram.com/redbarnworship/"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
                     >
-                        <!-- <img src="/img/spotify_logo_transparent.png" alt="Spotify" class="w-10 h-10 rounded-full" /> -->
+                        <img src="/img/instagram_logo.jpg" alt="Instagram" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Instagram</span>
                     </a>
 
                     <a 
-                        href="https://open.spotify.com/album/1XTO9M1CWXLMGY0dUcRfnO"
+                        href="https://groupme.com/join_group/102740926/1pPZSsMo"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
                     >
-                        <!-- <img src="/img/spotify_logo_transparent.png" alt="Spotify" class="w-10 h-10 rounded-full" /> -->
+                        <img src="/img/groupme_logo_2.jpg" alt="GroupMe" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">GroupMe</span>
                     </a>
 
                     <a 
-                        href="https://open.spotify.com/album/1XTO9M1CWXLMGY0dUcRfnO"
+                        href="mailto:redbarnworship@gmail.com"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
                     >
-                        <!-- <img src="/img/spotify_logo_transparent.png" alt="Spotify" class="w-10 h-10 rounded-full" /> -->
-                        <span class="w-36 group-hover:text-black transition">Email Us!</span>
+                        <img src="/img/email_icon.jpg" alt="Email Icon" class="w-10 h-10 rounded-full" />
+                        <span class="w-36 group-hover:text-black transition">Contact</span>
                     </a>
 
-                    <a 
+                    <!-- <a 
                         href="https://open.spotify.com/album/1XTO9M1CWXLMGY0dUcRfnO"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
                     >
-                        <!-- <img src="/img/spotify_logo_transparent.png" alt="Spotify" class="w-10 h-10 rounded-full" /> -->
+                        <img src="/img/spotify_logo_transparent.png" alt="Spotify" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Need a ride?</span>
-                    </a>
+                    </a> -->
 
 
                 </div>
