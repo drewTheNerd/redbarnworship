@@ -14,18 +14,18 @@ import { Head, Link } from '@inertiajs/vue3';
 
         <main class="relative z-10">
             <section class="max-w-sm mx-auto p-2">
-                <!-- <div class="w-full px-20 py-8">
+                <div class="w-full px-12 pt-8">
                     <img
-                        src="/img/album_cover.jpg"
-                        alt="Album Cover"
-                        class="w-full h-full object-cover rounded-2xl border-4 border-white shadow-md opacity-0 scale-95 animate-fade-in delay-100"
+                        src="/img/RBW_logo_transparent.png"
+                        alt="Red Barn Worship Logo"
+                        class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-100"
                     />
-                </div> -->
+                </div>
 
                 <div class="w-full text-white text-center py-4">
-                    <h1 class="text-3xl font-helvetica font-black opacity-0 animate-fade-in delay-300">
+                    <!-- <h1 class="text-3xl font-helvetica font-black opacity-0 animate-fade-in delay-300">
                         Red Barn Worship
-                    </h1>
+                    </h1> -->
                     <p class="text-lg font-helvetica font-regular opacity-0 animate-fade-in delay-300">
                         Next Worship Night: <br> 7pm, Friday, August 22nd at The Red Barn!
                     </p>
