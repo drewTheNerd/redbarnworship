@@ -3,12 +3,14 @@ import { Head, Link } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <Head title=""></Head>
+    <Head title="">
+        <link rel="preload" as="image" href="/img/barn_bg_vertical.jpg">
+    </Head>
 
     <div class="relative min-h-dvh">
         <!-- Background -->
         <div
-            class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-50"
+            class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-40"
             style="background-image: url('/img/barn_bg_vertical.jpg');"
         ></div>
 
@@ -18,7 +20,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     <img
                         src="/img/RBW_logo_transparent.png"
                         alt="Red Barn Worship Logo"
-                        class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-100"
+                        class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300"
                     />
                 </div>
 
@@ -26,7 +28,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     <!-- <h1 class="text-3xl font-helvetica font-black opacity-0 animate-fade-in delay-300">
                         Red Barn Worship
                     </h1> -->
-                    <p class="text-lg font-helvetica font-regular opacity-0 animate-fade-in delay-300">
+                    <p class="text-lg font-helvetica font-regular opacity-0 animate-fade-in delay-500">
                         Next Worship Night: <br> 7pm, Friday, August 22nd at The Red Barn!
                     </p>
                 </div>
@@ -45,7 +47,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     <a 
                         href="https://groupme.com/join_group/102740926/1pPZSsMo"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-800 group"
                     >
                         <img src="/img/groupme_logo_2.jpg" alt="GroupMe" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">GroupMe</span>
@@ -54,19 +56,35 @@ import { Head, Link } from '@inertiajs/vue3';
                     <a 
                         href="https://maps.app.goo.gl/PQNsYXUfY12royyn6"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
                     >
                         <img src="/img/google_maps_icon.jpg" alt="Google Maps" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Directions</span>
                     </a>
 
+                    <h2
+                        class="text-white text-md uppercase tracking-widest font-medium mt-3
+                         transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000"
+                    >
+                        Contact
+                    </h2>
+
+                    <a 
+                        href="https://ig.me/m/redbarnworship"
+                        target="_blank"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000 group"
+                    >
+                        <img src="/img/dm_icon.jpg" alt="Instagram DM Icon" class="w-10 h-10 rounded-full" />
+                        <span class="w-36 group-hover:text-black transition">Send us a DM!</span>
+                    </a>
+
                     <a 
                         href="mailto:redbarnworship@gmail.com"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1100 group"
                     >
                         <img src="/img/email_icon.jpg" alt="Email Icon" class="w-10 h-10 rounded-full" />
-                        <span class="w-36 group-hover:text-black transition">Contact</span>
+                        <span class="w-36 group-hover:text-black transition">Email Us</span>
                     </a>
 
 
@@ -124,12 +142,26 @@ import { Head, Link } from '@inertiajs/vue3';
     animation: slideUp 0.7s ease-out forwards;
 }
 
-/* Delay helpers */
-.delay-100 { animation-delay: 100ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-700 { animation-delay: 700ms; }
-.delay-900 { animation-delay: 900ms; }
+/* Animation Delay Helpers */
+.delay-300  { animation-delay: 300ms; }
+.delay-400  { animation-delay: 400ms; }
+.delay-500  { animation-delay: 500ms; }
+.delay-600  { animation-delay: 600ms; }
+.delay-700  { animation-delay: 700ms; }
+.delay-800  { animation-delay: 800ms; }
+.delay-900  { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1100 { animation-delay: 1100ms; }
+.delay-1200 { animation-delay: 1200ms; }
+.delay-1300 { animation-delay: 1300ms; }
+.delay-1400 { animation-delay: 1400ms; }
+.delay-1500 { animation-delay: 1500ms; }
+.delay-1600 { animation-delay: 1600ms; }
+.delay-1700 { animation-delay: 1700ms; }
+.delay-1800 { animation-delay: 1800ms; }
+.delay-1900 { animation-delay: 1900ms; }
+.delay-2000 { animation-delay: 2000ms; }
+
 
 body {
     background-color: #7896b4;
