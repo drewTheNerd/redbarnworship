@@ -20,7 +20,7 @@ if (Carbon::now('America/Chicago')->lt($cutoff)) {
     // AFTER cutoff
     Route::get('/', function () {
         return Inertia::render('Album');
-    })->name('home');
+    })->name('homeButItsAlbum');
 
     // /about works normally
     Route::get('/about', function () {
