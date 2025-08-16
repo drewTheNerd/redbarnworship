@@ -16,20 +16,26 @@ import { Head, Link } from '@inertiajs/vue3';
 
         <main class="relative z-10">
             <section class="max-w-sm mx-auto p-2">
-                <div class="w-full px-12 pt-8">
+                <a href="/" class="w-full px-12 pt-8">
                     <img
                         src="/img/RBW_logo_transparent.png"
                         alt="Red Barn Worship Logo"
                         class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300"
                     />
-                </div>
+                </a>
 
                 <div class="w-full text-white text-center py-4">
                     <!-- <h1 class="text-3xl font-helvetica font-black opacity-0 animate-fade-in delay-300">
                         Red Barn Worship
                     </h1> -->
-                    <p class="text-lg font-helvetica font-regular opacity-0 animate-fade-in delay-500">
-                        <span class="font-medium">Next Worship Night:</span> <br> Friday, August 22nd at 7pm at The Red Barn!
+                    <p class="text-md px-4 font-helvetica font-regular opacity-0 animate-fade-in delay-500">
+                        Red Barn Worship serves to create a space for students to find community and worship Christ, no matter their church home, current ministry, or background. 
+                    </p>
+
+                    <br>
+
+                    <p class="text-md px-4 font-helvetica font-regular opacity-0 animate-fade-in delay-500">
+                        We host student-led worship nights on Auburn's campus, be sure to follow us on Instagram or join the GroupMe to stay informed on our next worship night!
                     </p>
                 </div>
 
@@ -53,14 +59,6 @@ import { Head, Link } from '@inertiajs/vue3';
                         <span class="w-36 group-hover:text-black transition">GroupMe</span>
                     </a>
 
-                    <a 
-                        href="https://maps.app.goo.gl/PQNsYXUfY12royyn6"
-                        target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
-                    >
-                        <img src="/img/google_maps_icon.jpg" alt="Google Maps" class="w-10 h-10 rounded-full" />
-                        <span class="w-36 group-hover:text-black transition">Directions</span>
-                    </a>
 
                     <h2
                         class="text-white text-md uppercase tracking-widest font-medium mt-3
@@ -86,6 +84,28 @@ import { Head, Link } from '@inertiajs/vue3';
                         <img src="/img/email_icon.jpg" alt="Email Icon" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Email Us</span>
                     </a>
+
+
+
+                    <h2
+                        class="text-white text-md uppercase tracking-widest font-medium mt-3
+                         transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000"
+                    >
+                        Photos
+                    </h2>
+
+                    <a 
+                        href="https://drive.google.com/drive/folders/1pp20YmiXDiaWfrD4koRAjY0IaVXnZY0W"
+                        target="_blank"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000 group"
+                    >
+                        <img src="/img/back_at_the_barn.jpg" alt="Back At The Barn Photo" class="w-10 h-10 rounded-full" />
+                        <span class="w-36 group-hover:text-black transition">Back At The Barn</span>
+                    </a>
+
+                    <div class="h-48"></div>
+
+
 
 
                     

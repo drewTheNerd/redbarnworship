@@ -3,7 +3,7 @@ import { Head, Link } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <Head title=""></Head>
+    <Head title="At The Arena (Live)"></Head>
 
     <div class="relative min-h-dvh">
         <!-- Background -->
@@ -45,10 +45,35 @@ import { Head, Link } from '@inertiajs/vue3';
                     <a 
                         href="https://music.apple.com/us/album/homecoming-tremble-single/1825049627"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-800 group"
                     >
                         <img src="/img/apple_music_logo.png" alt="Apple Music" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Apple Music</span>
+                    </a>
+
+                    <a 
+                        href="https://youtube.com/watch?v=rz8kiJDpogE"
+                        target="_blank"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
+                    >
+                        <img src="/img/youtube_icon.png" alt="YouTube" class="w-10 h-10 rounded-full" />
+                        <span class="w-36 group-hover:text-black transition">YouTube</span>
+                    </a>
+
+
+                    <!-- <h2
+                        class="text-black text-md uppercase tracking-widest font-medium mt-1
+                         transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000"
+                    >
+                        More
+                    </h2> -->
+
+                    <a 
+                        href="/about"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000 group mt-4"
+                    >
+                        <!-- <img src="/img/dm_icon.jpg" alt="Instagram DM Icon" class="w-10 h-10 rounded-full" /> -->
+                        <span class="w-58 group-hover:text-black transition py-1">About Red Barn Worship <i class="fa-solid fa-chevron-right pl-2"></i></span>
                     </a>
 
 
@@ -97,9 +122,23 @@ import { Head, Link } from '@inertiajs/vue3';
 /* Delay helpers */
 .delay-100 { animation-delay: 100ms; }
 .delay-300 { animation-delay: 300ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-700 { animation-delay: 700ms; }
-.delay-900 { animation-delay: 900ms; }
+.delay-400  { animation-delay: 400ms; }
+.delay-500  { animation-delay: 500ms; }
+.delay-600  { animation-delay: 600ms; }
+.delay-700  { animation-delay: 700ms; }
+.delay-800  { animation-delay: 800ms; }
+.delay-900  { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1100 { animation-delay: 1100ms; }
+.delay-1200 { animation-delay: 1200ms; }
+.delay-1300 { animation-delay: 1300ms; }
+.delay-1400 { animation-delay: 1400ms; }
+.delay-1500 { animation-delay: 1500ms; }
+.delay-1600 { animation-delay: 1600ms; }
+.delay-1700 { animation-delay: 1700ms; }
+.delay-1800 { animation-delay: 1800ms; }
+.delay-1900 { animation-delay: 1900ms; }
+.delay-2000 { animation-delay: 2000ms; }
 
 body {
     background-color: #7896b4;

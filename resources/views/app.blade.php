@@ -26,6 +26,9 @@
         <!-- apple styles -->
         <meta name="theme-color" content="#b1d3e7">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+        <!-- fontawesome (attitude lighting kit) -->
+        <script src="https://kit.fontawesome.com/fd7595b986.js" crossorigin="anonymous"></script>
     </head>
     <body class="antialiased">
         @inertia

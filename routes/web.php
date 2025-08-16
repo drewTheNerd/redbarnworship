@@ -2,15 +2,57 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Carbon\Carbon;
 
-Route::get('/', function () {
-    return Inertia::render('Linktree');
-})->name('home');
+// define the cutoff timestamp
+$cutoff = Carbon::create(2025, 8, 16, 13, 49, 0, 'America/Chicago'); // 1:46pm Central
+
+if (Carbon::now('America/Chicago')->lt($cutoff)) {
+    // BEFORE cutoff → everything goes to Linktree
+    Route::get('/', function () {
+        return Inertia::render('Linktree');
+    })->name('home');
+
+    Route::any('{any}', function () {
+        return redirect('/');
+    })->where('any', '.*')->name('home');
+} else {
+    // AFTER cutoff
+    Route::get('/', function () {
+        return Inertia::render('Album');
+    })->name('home');
+
+    // /about works normally
+    Route::get('/about', function () {
+        return Inertia::render('About');
+    })->name('about');
 
 
-Route::get('/album', function () {
-    return Inertia::render('Linktree');
-})->name('album');
+    // anything else
+    Route::any('{any}', function () {
+        return redirect('/');
+    })->where('any', '.*')->name('album');
+}
+
+
+
+
+
+
+
+// Route::get('/', function () {
+//     return Inertia::render('Linktree');
+// })->name('home');
+
+
+// Route::get('/album', function () {
+//     return Inertia::render('Album');
+// })->name('album');
+
+
+// Route::get('/about', function () {
+//     return Inertia::render('About');
+// })->name('about');
 
 
 
