@@ -13,6 +13,16 @@ if (Carbon::now('America/Chicago')->lt($cutoff)) {
         return Inertia::render('Linktree');
     })->name('home');
 
+    // /about works normally
+    Route::get('/about', function () {
+        return Inertia::render('About');
+    })->name('about_normal');
+
+    // /album works normally
+    Route::get('/album', function () {
+        return Inertia::render('Album');
+    })->name('album_normal');
+
     Route::any('{any}', function () {
         return redirect('/');
     })->where('any', '.*')->name('home');
