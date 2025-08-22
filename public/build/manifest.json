@@ -4,7 +4,7 @@
     "name": "_plugin-vue_export-helper"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-B0YJcOns.js",
+    "file": "assets/app-DUR4Fdb3.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -19,7 +19,7 @@
     ]
   },
   "resources/js/pages/About.vue": {
-    "file": "assets/About-BEyXL13z.js",
+    "file": "assets/About-Luo-Pt5q.js",
     "name": "About",
     "src": "resources/js/pages/About.vue",
     "isDynamicEntry": true,
@@ -32,7 +32,7 @@
     ]
   },
   "resources/js/pages/Album.vue": {
-    "file": "assets/Album-zas1Ibzs.js",
+    "file": "assets/Album-BZMblP00.js",
     "name": "Album",
     "src": "resources/js/pages/Album.vue",
     "isDynamicEntry": true,
@@ -41,11 +41,11 @@
       "__plugin-vue_export-helper-DlAUqK2U.js"
     ],
     "css": [
-      "assets/Album-BrTQ707K.css"
+      "assets/Album-Be2N9-MK.css"
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-Bl5yH6-R.js",
+    "file": "assets/ItsARedBarn-BqnZYYNY.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
@@ -54,7 +54,7 @@
     ]
   },
   "resources/js/pages/Linktree.vue": {
-    "file": "assets/Linktree-kyFD5jgM.js",
+    "file": "assets/Linktree-Bax_IKfP.js",
     "name": "Linktree",
     "src": "resources/js/pages/Linktree.vue",
     "isDynamicEntry": true,

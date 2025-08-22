@@ -34,7 +34,7 @@ import { Head, Link } from '@inertiajs/vue3';
                 <div class="w-full text-black text-center px-12 mt-4 space-y-3">
 
                     <a 
-                        href="https://open.spotify.com/album/1XTO9M1CWXLMGY0dUcRfnO"
+                        href="https://open.spotify.com/album/5jj23jhATw23rH1XcPWlWG"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
                     >
@@ -43,7 +43,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     </a>
 
                     <a 
-                        href="https://music.apple.com/us/album/homecoming-tremble-single/1825049627"
+                        href="https://music.apple.com/us/album/at-the-arena-live/1826048869"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-800 group"
                     >
@@ -52,7 +52,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     </a>
 
                     <a 
-                        href="https://youtube.com/watch?v=rz8kiJDpogE"
+                        href="https://youtu.be/fl0GI-vYmqg"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
                     >
