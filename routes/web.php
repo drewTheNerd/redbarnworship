@@ -64,13 +64,13 @@ function trackPageView(string $key, ?string $filePath = null): int {
 
 
 Route::get('/', function () {
-    $visits = trackPageView('homeButItsAlbum');
+    // $visits = trackPageView('homeButItsAlbum');
     return Inertia::render('Album');
 })->name('homeButItsAlbum');
 
 // /about works normally
 Route::get('/about', function () {
-    $visits = trackPageView('about');
+    // $visits = trackPageView('about');
     return Inertia::render('About');
 })->name('about');
 
