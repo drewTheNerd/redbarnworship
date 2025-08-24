@@ -3,74 +3,21 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Carbon\Carbon;
+use App\Services\PageViewService;
 
 // ==== ROUTE TRACKING =====
 
 
 
 
-
-/**
- * Track a page view by key and return the updated count.
- * Stores counts in storage/app/stats.json as: { "homeButItsAlbum": 123, "about": 45, ... }
- */
-
-function trackPageView(string $key, ?string $filePath = null): int {
-    $filePath = $filePath ?: storage_path('app/stats.json');
-
-    // Ensure directory exists
-    $dir = dirname($filePath);
-    if (!is_dir($dir)) {
-        mkdir($dir, 0775, true);
-    }
-
-    // Open or create file without truncation
-    $fp = fopen($filePath, 'c+');
-    if (!$fp) {
-        // Fallback: try a simple non-locked bump in memory
-        return 0;
-    }
-
-    // Exclusive lock so concurrent requests don't clobber each other
-    flock($fp, LOCK_EX);
-
-    // Read existing JSON
-    rewind($fp);
-    $raw = stream_get_contents($fp);
-    $stats = $raw ? json_decode($raw, true) : [];
-    if (!is_array($stats)) {
-        $stats = [];
-    }
-
-    // Increment the key
-    $stats[$key] = ($stats[$key] ?? 0) + 1;
-
-    // Write back pretty JSON atomically
-    rewind($fp);
-    ftruncate($fp, 0);
-    fwrite($fp, json_encode($stats, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-    fflush($fp);
-
-    // Unlock/close
-    flock($fp, LOCK_UN);
-    fclose($fp);
-
-    return $stats[$key];
-}
-
-
-
-
-
-
 Route::get('/', function () {
-    // $visits = trackPageView('homeButItsAlbum');
+    $visits = PageViewService::track('homeButItsAlbum');
     return Inertia::render('Album');
 })->name('homeButItsAlbum');
 
 // /about works normally
 Route::get('/about', function () {
-    // $visits = trackPageView('about');
+    $visits = PageViewService::track('about');
     return Inertia::render('About');
 })->name('about');
 
@@ -79,25 +26,10 @@ Route::get('/about', function () {
 
 // admin stats
 Route::get('/stats', function () {
-    // Check password from query param
-    if (request('pw') !== 'jesus') {
+    if (request('pw') !== env('STATS_PW', 'jesus')) {
         abort(403, 'Unauthorized');
     }
-
-    $filePath = storage_path('app/stats.json');
-
-    if (!file_exists($filePath)) {
-        // Return empty JSON if no stats file exists yet
-        return response()->json([], 200, [], JSON_PRETTY_PRINT);
-    }
-
-    $contents = file_get_contents($filePath);
-    // If you want to return as plain text:
-    // return response($contents, 200)->header('Content-Type', 'text/plain');
-
-    // Or as proper JSON with pretty print:
-    return response($contents, 200)
-        ->header('Content-Type', 'application/json');
+    return response()->json(PageViewService::all(), 200, [], JSON_PRETTY_PRINT);
 });
 
 
