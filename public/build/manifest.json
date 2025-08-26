@@ -4,7 +4,7 @@
     "name": "_plugin-vue_export-helper"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-DUR4Fdb3.js",
+    "file": "assets/app-JWWdeVuV.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -12,14 +12,15 @@
       "resources/js/pages/About.vue",
       "resources/js/pages/Album.vue",
       "resources/js/pages/ItsARedBarn.vue",
-      "resources/js/pages/Linktree.vue"
+      "resources/js/pages/Linktree.vue",
+      "resources/js/pages/Preorder.vue"
     ],
     "css": [
-      "assets/app-hOIC-gg2.css"
+      "assets/app-mtuCF7Ic.css"
     ]
   },
   "resources/js/pages/About.vue": {
-    "file": "assets/About-Luo-Pt5q.js",
+    "file": "assets/About-B_qF-ODD.js",
     "name": "About",
     "src": "resources/js/pages/About.vue",
     "isDynamicEntry": true,
@@ -28,11 +29,11 @@
       "__plugin-vue_export-helper-DlAUqK2U.js"
     ],
     "css": [
-      "assets/About-CW7Mwyjn.css"
+      "assets/About-4lqRPCrV.css"
     ]
   },
   "resources/js/pages/Album.vue": {
-    "file": "assets/Album-BZMblP00.js",
+    "file": "assets/Album-CIathN95.js",
     "name": "Album",
     "src": "resources/js/pages/Album.vue",
     "isDynamicEntry": true,
@@ -45,7 +46,7 @@
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-BqnZYYNY.js",
+    "file": "assets/ItsARedBarn-YSwZplx6.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
@@ -54,7 +55,7 @@
     ]
   },
   "resources/js/pages/Linktree.vue": {
-    "file": "assets/Linktree-Bax_IKfP.js",
+    "file": "assets/Linktree-9kquNHxy.js",
     "name": "Linktree",
     "src": "resources/js/pages/Linktree.vue",
     "isDynamicEntry": true,
@@ -64,6 +65,19 @@
     ],
     "css": [
       "assets/Linktree-B7bKSzem.css"
+    ]
+  },
+  "resources/js/pages/Preorder.vue": {
+    "file": "assets/Preorder-BLyo00jo.js",
+    "name": "Preorder",
+    "src": "resources/js/pages/Preorder.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.ts",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ],
+    "css": [
+      "assets/Preorder-Bk6moTdM.css"
     ]
   }
 }
