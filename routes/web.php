@@ -22,6 +22,12 @@ Route::get('/about', function () {
 })->name('about');
 
 
+// request album
+// Route::get('/preorder', function () {
+//     $visits = PageViewService::track('preorder');
+//     return Inertia::render('Preorder');
+// })->name('preorder');
+
 
 
 // admin stats
