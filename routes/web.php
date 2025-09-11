@@ -11,32 +11,38 @@ use App\Services\PageViewService;
 
 
 Route::get('/', function () {
-    $visits = PageViewService::track('homeButItsAlbum');
-    return Inertia::render('Album');
-})->name('homeButItsAlbum');
-
-// /about works normally
-Route::get('/about', function () {
-    $visits = PageViewService::track('about');
-    return Inertia::render('About');
-})->name('about');
+    $visits = PageViewService::track('prayer');
+    return Inertia::render('Prayer');
+})->name('prayer');
 
 
-// request album
-// Route::get('/preorder', function () {
-//     $visits = PageViewService::track('preorder');
-//     return Inertia::render('Preorder');
-// })->name('preorder');
+// Route::get('/', function () {
+//     $visits = PageViewService::track('homeButItsAlbum');
+//     return Inertia::render('Album');
+// })->name('homeButItsAlbum');
+
+// // /about works normally
+// Route::get('/about', function () {
+//     $visits = PageViewService::track('about');
+//     return Inertia::render('About');
+// })->name('about');
+
+
+// // request album
+// // Route::get('/preorder', function () {
+// //     $visits = PageViewService::track('preorder');
+// //     return Inertia::render('Preorder');
+// // })->name('preorder');
 
 
 
-// admin stats
-Route::get('/stats', function () {
-    if (request('pw') !== env('STATS_PW', 'jesus')) {
-        abort(403, 'Unauthorized');
-    }
-    return response()->json(PageViewService::all(), 200, [], JSON_PRETTY_PRINT);
-});
+// // admin stats
+// Route::get('/stats', function () {
+//     if (request('pw') !== env('STATS_PW', 'jesus')) {
+//         abort(403, 'Unauthorized');
+//     }
+//     return response()->json(PageViewService::all(), 200, [], JSON_PRETTY_PRINT);
+// });
 
 
 
@@ -45,7 +51,7 @@ Route::get('/stats', function () {
 // anything else
 Route::any('{any}', function () {
     return redirect('/');
-})->where('any', '.*')->name('album');
+})->where('any', '.*')->name('prayer');
 
 
 
