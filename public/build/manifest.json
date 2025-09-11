@@ -4,7 +4,7 @@
     "name": "_plugin-vue_export-helper"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-JWWdeVuV.js",
+    "file": "assets/app-C4vSPiHL.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -13,6 +13,7 @@
       "resources/js/pages/Album.vue",
       "resources/js/pages/ItsARedBarn.vue",
       "resources/js/pages/Linktree.vue",
+      "resources/js/pages/Prayer.vue",
       "resources/js/pages/Preorder.vue"
     ],
     "css": [
@@ -20,7 +21,7 @@
     ]
   },
   "resources/js/pages/About.vue": {
-    "file": "assets/About-B_qF-ODD.js",
+    "file": "assets/About-D9_30y7d.js",
     "name": "About",
     "src": "resources/js/pages/About.vue",
     "isDynamicEntry": true,
@@ -33,7 +34,7 @@
     ]
   },
   "resources/js/pages/Album.vue": {
-    "file": "assets/Album-CIathN95.js",
+    "file": "assets/Album-Cl0kiNP6.js",
     "name": "Album",
     "src": "resources/js/pages/Album.vue",
     "isDynamicEntry": true,
@@ -46,7 +47,7 @@
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-YSwZplx6.js",
+    "file": "assets/ItsARedBarn-DPDKRBVQ.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
@@ -55,7 +56,7 @@
     ]
   },
   "resources/js/pages/Linktree.vue": {
-    "file": "assets/Linktree-9kquNHxy.js",
+    "file": "assets/Linktree-Bthg4B0b.js",
     "name": "Linktree",
     "src": "resources/js/pages/Linktree.vue",
     "isDynamicEntry": true,
@@ -67,8 +68,21 @@
       "assets/Linktree-B7bKSzem.css"
     ]
   },
+  "resources/js/pages/Prayer.vue": {
+    "file": "assets/Prayer-CIlSc-JT.js",
+    "name": "Prayer",
+    "src": "resources/js/pages/Prayer.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.ts",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ],
+    "css": [
+      "assets/Prayer-CCigV7Re.css"
+    ]
+  },
   "resources/js/pages/Preorder.vue": {
-    "file": "assets/Preorder-BLyo00jo.js",
+    "file": "assets/Preorder-B7pnKkh-.js",
     "name": "Preorder",
     "src": "resources/js/pages/Preorder.vue",
     "isDynamicEntry": true,
