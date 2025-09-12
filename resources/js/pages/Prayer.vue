@@ -29,6 +29,23 @@ import { Head, Link } from '@inertiajs/vue3';
                         Red Barn Worship
                     </h1> -->
                     <p class="text-md px-4 font-helvetica font-regular opacity-0 animate-fade-in delay-500">
+                        Dear friends, after receiving notice from Auburn Student Affairs this morning, we would like to inform you that we will not be chalking the campus due to complications with university policy. 
+                    <br>
+                    <br>
+                        The university has been extremely helpful in working alongside us to ensure we are in coordination for future gatherings. 
+                    <br>
+                    <br>
+                        We will meet at the Village loop at 7:00pm tonight to walk together and cover our campus in prayer. 
+                    <br>
+                    <br>
+                        Praise God for His guidance and grace during this time.
+
+                    <br>
+                    <br>
+                    <br>
+                    <b>Original message below <br>(posted September 11th, 2025)</b>
+                    <br>
+                    <br>
                         Friends, it has come to our immediate attention that there is HEAVINESS on campus from the evil that is lurking right now. It's very real and it's very dark and it is a weight and a shadow over everyone’s hearts. With so many tragedies, murders, and even today being 9/11. It's blindsided all of us. 
                     <br>
                     <br>

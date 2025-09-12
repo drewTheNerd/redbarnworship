@@ -36,13 +36,13 @@ Route::get('/', function () {
 
 
 
-// // admin stats
-// Route::get('/stats', function () {
-//     if (request('pw') !== env('STATS_PW', 'jesus')) {
-//         abort(403, 'Unauthorized');
-//     }
-//     return response()->json(PageViewService::all(), 200, [], JSON_PRETTY_PRINT);
-// });
+// admin stats
+Route::get('/stats', function () {
+    if (request('pw') !== env('STATS_PW', 'jesus')) {
+        abort(403, 'Unauthorized');
+    }
+    return response()->json(PageViewService::all(), 200, [], JSON_PRETTY_PRINT);
+});
 
 
 
