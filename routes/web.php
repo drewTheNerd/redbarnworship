@@ -7,32 +7,23 @@ use App\Services\PageViewService;
 
 // ==== ROUTE TRACKING =====
 
-
-
-
 Route::get('/', function () {
-    $visits = PageViewService::track('prayer');
-    return Inertia::render('Prayer');
-})->name('prayer');
+    $visits = PageViewService::track('homeNormalWithLinks');
+    return Inertia::render('HomeNormalWithLinks');
+})->name('homeNormalWithLinks');
 
 
-// Route::get('/', function () {
-//     $visits = PageViewService::track('homeButItsAlbum');
-//     return Inertia::render('Album');
-// })->name('homeButItsAlbum');
-
-// // /about works normally
-// Route::get('/about', function () {
-//     $visits = PageViewService::track('about');
-//     return Inertia::render('About');
-// })->name('about');
+// album launch
+Route::get('/album', function () {
+    $visits = PageViewService::track('album');
+    return Inertia::render('Album');
+})->name('album');
 
 
-// // request album
-// // Route::get('/preorder', function () {
-// //     $visits = PageViewService::track('preorder');
-// //     return Inertia::render('Preorder');
-// // })->name('preorder');
+// about
+Route::get('/about', function () {
+    return redirect('/');
+})->name('about');
 
 
 
@@ -51,7 +42,7 @@ Route::get('/stats', function () {
 // anything else
 Route::any('{any}', function () {
     return redirect('/');
-})->where('any', '.*')->name('prayer');
+})->where('any', '.*')->name('homeNormalWithLinks');
 
 
 

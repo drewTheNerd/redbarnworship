@@ -4,24 +4,25 @@
     "name": "_plugin-vue_export-helper"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-BMUNbkga.js",
+    "file": "assets/app-9sVRAgSn.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "dynamicImports": [
       "resources/js/pages/About.vue",
       "resources/js/pages/Album.vue",
+      "resources/js/pages/HomeNormalWithLinks.vue",
       "resources/js/pages/ItsARedBarn.vue",
       "resources/js/pages/Linktree.vue",
       "resources/js/pages/Prayer.vue",
       "resources/js/pages/Preorder.vue"
     ],
     "css": [
-      "assets/app-mtuCF7Ic.css"
+      "assets/app-BS4o2pEx.css"
     ]
   },
   "resources/js/pages/About.vue": {
-    "file": "assets/About-VaIFVKMI.js",
+    "file": "assets/About-CEOVQflD.js",
     "name": "About",
     "src": "resources/js/pages/About.vue",
     "isDynamicEntry": true,
@@ -34,7 +35,7 @@
     ]
   },
   "resources/js/pages/Album.vue": {
-    "file": "assets/Album-bzThy-za.js",
+    "file": "assets/Album-BG1jkpUZ.js",
     "name": "Album",
     "src": "resources/js/pages/Album.vue",
     "isDynamicEntry": true,
@@ -46,8 +47,21 @@
       "assets/Album-Be2N9-MK.css"
     ]
   },
+  "resources/js/pages/HomeNormalWithLinks.vue": {
+    "file": "assets/HomeNormalWithLinks-B3o25IQw.js",
+    "name": "HomeNormalWithLinks",
+    "src": "resources/js/pages/HomeNormalWithLinks.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.ts",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ],
+    "css": [
+      "assets/HomeNormalWithLinks-C9bweIkP.css"
+    ]
+  },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-BFpiKFo6.js",
+    "file": "assets/ItsARedBarn-CiLZilyG.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
@@ -56,7 +70,7 @@
     ]
   },
   "resources/js/pages/Linktree.vue": {
-    "file": "assets/Linktree-OFyH2pUT.js",
+    "file": "assets/Linktree-BHkN6GGz.js",
     "name": "Linktree",
     "src": "resources/js/pages/Linktree.vue",
     "isDynamicEntry": true,
@@ -69,7 +83,7 @@
     ]
   },
   "resources/js/pages/Prayer.vue": {
-    "file": "assets/Prayer-CAfttK8z.js",
+    "file": "assets/Prayer-CE55RPOs.js",
     "name": "Prayer",
     "src": "resources/js/pages/Prayer.vue",
     "isDynamicEntry": true,
@@ -82,7 +96,7 @@
     ]
   },
   "resources/js/pages/Preorder.vue": {
-    "file": "assets/Preorder-kp7hStgu.js",
+    "file": "assets/Preorder-DZIFIWyS.js",
     "name": "Preorder",
     "src": "resources/js/pages/Preorder.vue",
     "isDynamicEntry": true,
