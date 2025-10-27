@@ -4,13 +4,14 @@
     "name": "_plugin-vue_export-helper"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-9sVRAgSn.js",
+    "file": "assets/app-4_HJQujU.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "dynamicImports": [
       "resources/js/pages/About.vue",
       "resources/js/pages/Album.vue",
+      "resources/js/pages/Evangalism.vue",
       "resources/js/pages/HomeNormalWithLinks.vue",
       "resources/js/pages/ItsARedBarn.vue",
       "resources/js/pages/Linktree.vue",
@@ -18,11 +19,11 @@
       "resources/js/pages/Preorder.vue"
     ],
     "css": [
-      "assets/app-BS4o2pEx.css"
+      "assets/app-DyBtDIo2.css"
     ]
   },
   "resources/js/pages/About.vue": {
-    "file": "assets/About-CEOVQflD.js",
+    "file": "assets/About-hOtiDRc0.js",
     "name": "About",
     "src": "resources/js/pages/About.vue",
     "isDynamicEntry": true,
@@ -35,7 +36,7 @@
     ]
   },
   "resources/js/pages/Album.vue": {
-    "file": "assets/Album-BG1jkpUZ.js",
+    "file": "assets/Album-AVJbc8MU.js",
     "name": "Album",
     "src": "resources/js/pages/Album.vue",
     "isDynamicEntry": true,
@@ -47,8 +48,21 @@
       "assets/Album-Be2N9-MK.css"
     ]
   },
+  "resources/js/pages/Evangalism.vue": {
+    "file": "assets/Evangalism-UQyJqcn_.js",
+    "name": "Evangalism",
+    "src": "resources/js/pages/Evangalism.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.ts",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ],
+    "css": [
+      "assets/Evangalism-D-y1Ss4y.css"
+    ]
+  },
   "resources/js/pages/HomeNormalWithLinks.vue": {
-    "file": "assets/HomeNormalWithLinks-B3o25IQw.js",
+    "file": "assets/HomeNormalWithLinks-BJKVEC0q.js",
     "name": "HomeNormalWithLinks",
     "src": "resources/js/pages/HomeNormalWithLinks.vue",
     "isDynamicEntry": true,
@@ -61,7 +75,7 @@
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-CiLZilyG.js",
+    "file": "assets/ItsARedBarn-CNV7RayL.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
@@ -70,7 +84,7 @@
     ]
   },
   "resources/js/pages/Linktree.vue": {
-    "file": "assets/Linktree-BHkN6GGz.js",
+    "file": "assets/Linktree-CCaWEz5r.js",
     "name": "Linktree",
     "src": "resources/js/pages/Linktree.vue",
     "isDynamicEntry": true,
@@ -83,7 +97,7 @@
     ]
   },
   "resources/js/pages/Prayer.vue": {
-    "file": "assets/Prayer-CE55RPOs.js",
+    "file": "assets/Prayer-CzTSbZb9.js",
     "name": "Prayer",
     "src": "resources/js/pages/Prayer.vue",
     "isDynamicEntry": true,
@@ -96,7 +110,7 @@
     ]
   },
   "resources/js/pages/Preorder.vue": {
-    "file": "assets/Preorder-DZIFIWyS.js",
+    "file": "assets/Preorder-B8tRJOu5.js",
     "name": "Preorder",
     "src": "resources/js/pages/Preorder.vue",
     "isDynamicEntry": true,

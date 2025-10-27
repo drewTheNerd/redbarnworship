@@ -26,6 +26,12 @@ Route::get('/about', function () {
 })->name('about');
 
 
+// evangalism
+Route::get('/evangalism', function () {
+    return Inertia::render('Evangalism');
+})->name('evangalism');
+
+
 
 // admin stats
 Route::get('/stats', function () {
@@ -42,7 +48,7 @@ Route::get('/stats', function () {
 // anything else
 Route::any('{any}', function () {
     return redirect('/');
-})->where('any', '.*')->name('homeNormalWithLinks');
+})->where('any', '.*')->name('any');
 
 
 
