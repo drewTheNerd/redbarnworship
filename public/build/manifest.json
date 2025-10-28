@@ -4,7 +4,7 @@
     "name": "_plugin-vue_export-helper"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-BCYzlHtX.js",
+    "file": "assets/app-DL9iKwm4.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -16,14 +16,15 @@
       "resources/js/pages/ItsARedBarn.vue",
       "resources/js/pages/Linktree.vue",
       "resources/js/pages/Prayer.vue",
-      "resources/js/pages/Preorder.vue"
+      "resources/js/pages/Preorder.vue",
+      "resources/js/pages/Stats.vue"
     ],
     "css": [
-      "assets/app-DyBtDIo2.css"
+      "assets/app-CURMLddL.css"
     ]
   },
   "resources/js/pages/About.vue": {
-    "file": "assets/About-DS-0Fn3X.js",
+    "file": "assets/About-ilwEU0bL.js",
     "name": "About",
     "src": "resources/js/pages/About.vue",
     "isDynamicEntry": true,
@@ -36,7 +37,7 @@
     ]
   },
   "resources/js/pages/Album.vue": {
-    "file": "assets/Album-Dg7YSqAr.js",
+    "file": "assets/Album-BayaTUNZ.js",
     "name": "Album",
     "src": "resources/js/pages/Album.vue",
     "isDynamicEntry": true,
@@ -49,7 +50,7 @@
     ]
   },
   "resources/js/pages/Evangelism.vue": {
-    "file": "assets/Evangelism-CqgkgiKK.js",
+    "file": "assets/Evangelism-BMk6UZ1C.js",
     "name": "Evangelism",
     "src": "resources/js/pages/Evangelism.vue",
     "isDynamicEntry": true,
@@ -62,7 +63,7 @@
     ]
   },
   "resources/js/pages/HomeNormalWithLinks.vue": {
-    "file": "assets/HomeNormalWithLinks-Cwq2EuIK.js",
+    "file": "assets/HomeNormalWithLinks-DhWzLL56.js",
     "name": "HomeNormalWithLinks",
     "src": "resources/js/pages/HomeNormalWithLinks.vue",
     "isDynamicEntry": true,
@@ -75,7 +76,7 @@
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-O9qcFe5n.js",
+    "file": "assets/ItsARedBarn-BHVsQVUh.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
@@ -84,7 +85,7 @@
     ]
   },
   "resources/js/pages/Linktree.vue": {
-    "file": "assets/Linktree-DUJEkco-.js",
+    "file": "assets/Linktree-XiY3154S.js",
     "name": "Linktree",
     "src": "resources/js/pages/Linktree.vue",
     "isDynamicEntry": true,
@@ -97,7 +98,7 @@
     ]
   },
   "resources/js/pages/Prayer.vue": {
-    "file": "assets/Prayer-DNOwlczf.js",
+    "file": "assets/Prayer-DFbAsSn9.js",
     "name": "Prayer",
     "src": "resources/js/pages/Prayer.vue",
     "isDynamicEntry": true,
@@ -110,7 +111,7 @@
     ]
   },
   "resources/js/pages/Preorder.vue": {
-    "file": "assets/Preorder-BJXle8KX.js",
+    "file": "assets/Preorder-D09woVuB.js",
     "name": "Preorder",
     "src": "resources/js/pages/Preorder.vue",
     "isDynamicEntry": true,
@@ -120,6 +121,19 @@
     ],
     "css": [
       "assets/Preorder-Bk6moTdM.css"
+    ]
+  },
+  "resources/js/pages/Stats.vue": {
+    "file": "assets/Stats-BDHkTwWD.js",
+    "name": "Stats",
+    "src": "resources/js/pages/Stats.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper-DlAUqK2U.js",
+      "resources/js/app.ts"
+    ],
+    "css": [
+      "assets/Stats-D6opd4jW.css"
     ]
   }
 }
