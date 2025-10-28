@@ -19,7 +19,7 @@ function toggleExpand(route) {
 </script>
 
 <template>
-	<div class="min-h-screen max-w-lg mx-auto text-white p-4">
+	<div class="min-h-screen max-w-lg mx-auto text-white py-4 px-2">
 		<!-- Logo -->
 		<div class="w-full flex justify-center mb-6">
 			<a href="/" class="w-48">
@@ -39,7 +39,7 @@ function toggleExpand(route) {
 		<div
 			v-for="stat in sortedStats"
 			:key="stat.route"
-			class="mb-8 border-2 px-4 py-2 rounded-lg border-gray-800"
+			class="mb-8 border-2 px-3 py-2 rounded-lg border-gray-800"
 		>
 			<!-- Header -->
 			<div class="flex justify-between items-center mb-3 cursor-pointer" @click="toggleExpand(stat.route)">
