@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        <title inertia>Red Barn Worship</title>
+        <meta name="description" content="Red Barn Worship creates a space for students to find community and worship Christ, no matter their church home, current ministry, or background.">
 
         <!-- favicon -->
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />

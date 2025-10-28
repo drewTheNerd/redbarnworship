@@ -8,9 +8,8 @@ use App\Services\PageViewService;
 // ==== ROUTE TRACKING =====
 
 Route::get('/', function () {
-    $visits = PageViewService::track('evangelism');
     return Inertia::render('Evangelism');
-})->name('homeNormalWithLinks');
+})->middleware('page.track:homeEvangelism')->name('homeEvangelism');
 
 
 // Route::get('/', function () {
@@ -21,9 +20,8 @@ Route::get('/', function () {
 
 // album launch
 Route::get('/album', function () {
-    $visits = PageViewService::track('album');
     return Inertia::render('Album');
-})->name('album');
+})->middleware('page.track:album')->name('album');
 
 
 // about
@@ -39,14 +37,60 @@ Route::get('/about', function () {
 
 
 
-// admin stats
+// // admin stats
+// Route::get('/stats', function () {
+//     if (request('pw') !== env('STATS_PW', 'jesus')) {
+//         abort(403, 'Unauthorized');
+//     }
+//     return response()->json(PageViewService::all(), 200, [], JSON_PRETTY_PRINT);
+// });
+
 Route::get('/stats', function () {
     if (request('pw') !== env('STATS_PW', 'jesus')) {
         abort(403, 'Unauthorized');
     }
-    return response()->json(PageViewService::all(), 200, [], JSON_PRETTY_PRINT);
-});
 
+    $stats = PageViewService::all();
+
+    $computed = collect($stats)
+        ->map(function ($data, $routeName) {
+            $days = $data['by_day'] ?? [];
+            $fbclidSum = 0;
+            $otherSum = 0;
+
+            foreach ($days as $day) {
+                if (is_int($day)) {
+                    $otherSum += $day;
+                } else {
+                    $fbclidSum += $day['fbclid'] ?? 0;
+                    $otherSum += $day['other'] ?? 0;
+                }
+            }
+
+            $totalDays = max(count($days), 1); // avoid div by zero
+            $avgFbclid = round($fbclidSum / $totalDays, 2);
+            $avgOther = round($otherSum / $totalDays, 2);
+            $avgTotal = round(($fbclidSum + $otherSum) / $totalDays, 2);
+
+            return [
+                'route' => $routeName,
+                'total_all_time' => $data['total_all_time'] ?? 0,
+                'avg_fbclid' => $avgFbclid,
+                'avg_other' => $avgOther,
+                'avg_total' => $avgTotal,
+                'fbclid_sum' => $fbclidSum,
+                'other_sum' => $otherSum,
+                'days_count' => $totalDays,
+                'by_day' => $days,
+            ];
+        })
+        ->sortByDesc('total_all_time')
+        ->values(); // reset index
+
+    return Inertia::render('Stats', [
+        'stats' => $computed,
+    ]);
+});
 
 
 

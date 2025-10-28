@@ -45,7 +45,11 @@ class PageViewService
 		$total = (int)($keyData['_previous'] ?? 0);
 		if (!empty($keyData['by_day']) && is_array($keyData['by_day'])) {
 			foreach ($keyData['by_day'] as $count) {
-				$total += (int)$count;
+				if (is_int($count)) {
+					$total += $count;
+				} elseif (is_array($count)) {
+					$total += (int)($count['fbclid'] ?? 0) + (int)($count['other'] ?? 0);
+				}
 			}
 		}
 		return $total;
@@ -56,7 +60,11 @@ class PageViewService
 		$sum = 0;
 		if (!empty($keyData['by_day']) && is_array($keyData['by_day'])) {
 			foreach ($keyData['by_day'] as $count) {
-				$sum += (int)$count;
+				if (is_int($count)) {
+					$sum += $count;
+				} elseif (is_array($count)) {
+					$sum += (int)($count['fbclid'] ?? 0) + (int)($count['other'] ?? 0);
+				}
 			}
 		}
 		return $sum;
@@ -100,8 +108,8 @@ class PageViewService
 		fclose($fp);
 	}
 
-	// Increment and return the count for a key (total all-time).
-	public static function track(string $key, ?string $filePath = null): int
+	// Increment and return total all-time count for a key
+	public static function track(string $key, bool $hasFbclid = false, ?string $filePath = null): int
 	{
 		$filePath = self::path($filePath);
 		[$stats, $fp] = self::load($filePath);
@@ -114,10 +122,22 @@ class PageViewService
 
 		$today = self::todayYmd();
 		$byDay =& $stats[$key]['by_day'];
-		$byDay[$today] = (int)($byDay[$today] ?? 0) + 1;
+
+		// Backward compatibility: convert int to structured array if needed
+		if (!isset($byDay[$today])) {
+			$byDay[$today] = ['fbclid' => 0, 'other' => 0];
+		} elseif (is_int($byDay[$today])) {
+			$old = (int)$byDay[$today];
+			$byDay[$today] = ['fbclid' => 0, 'other' => $old];
+		}
+
+		if ($hasFbclid) {
+			$byDay[$today]['fbclid']++;
+		} else {
+			$byDay[$today]['other']++;
+		}
 
 		$total = self::computeTotalForKey($stats[$key]);
-
 		self::saveAndClose($fp, $stats);
 
 		return $total;
@@ -146,7 +166,7 @@ class PageViewService
 		return 0;
 	}
 
-	// Get today's count (Central time) without incrementing.
+	// Get today's total (fbclid + other)
 	public static function getToday(string $key, ?string $filePath = null): int
 	{
 		$filePath = self::path($filePath);
@@ -155,13 +175,31 @@ class PageViewService
 		$data = json_decode(file_get_contents($filePath), true);
 		if (!is_array($data) || !array_key_exists($key, $data)) return 0;
 
-		if (is_int($data[$key])) return 0;
-
 		$today = self::todayYmd();
-		return (int)($data[$key]['by_day'][$today] ?? 0);
+		$entry = $data[$key]['by_day'][$today] ?? 0;
+
+		if (is_int($entry)) return (int)$entry;
+
+		return (int)($entry['fbclid'] ?? 0) + (int)($entry['other'] ?? 0);
 	}
 
-	// Get the count for a specific YYYY-MM-DD day for a key without incrementing.
+	// Get fbclid count for a specific day
+	public static function getFbclidByDay(string $key, string $ymd, ?string $filePath = null): int
+	{
+		$filePath = self::path($filePath);
+		if (!file_exists($filePath)) return 0;
+
+		$data = json_decode(file_get_contents($filePath), true);
+		if (!is_array($data) || !array_key_exists($key, $data)) return 0;
+
+		$entry = $data[$key]['by_day'][$ymd] ?? 0;
+
+		if (is_int($entry)) return 0;
+
+		return (int)($entry['fbclid'] ?? 0);
+	}
+
+	// Get total count for a specific day
 	public static function getByDay(string $key, string $ymd, ?string $filePath = null): int
 	{
 		$filePath = self::path($filePath);
@@ -170,16 +208,17 @@ class PageViewService
 		$data = json_decode(file_get_contents($filePath), true);
 		if (!is_array($data) || !array_key_exists($key, $data)) return 0;
 
-		if (is_int($data[$key])) return 0;
+		$entry = $data[$key]['by_day'][$ymd] ?? 0;
+		if (is_int($entry)) return (int)$entry;
 
-		return (int)($data[$key]['by_day'][$ymd] ?? 0);
+		return (int)($entry['fbclid'] ?? 0) + (int)($entry['other'] ?? 0);
 	}
 
 	/**
-	 * Get all stats, enriched with:
+	 * Get all stats with computed:
 	 * - total_all_time
-	 * - average_per_day (sum(by_day) / count(days), 2 decimals)
-	 * Also migrates legacy integers to structured form and writes back.
+	 * - average_per_day
+	 * Also migrates legacy integers to structured arrays.
 	 */
 	public static function all(?string $filePath = null): array
 	{
@@ -194,15 +233,21 @@ class PageViewService
 
 		foreach ($stats as $key => $value) {
 			$before = $stats[$key] ?? null;
-
 			self::ensureKeyStructure($stats, $key);
 
-			// If ensureKeyStructure changed the type, consider it a migration
-			if ($before !== $stats[$key]) {
-				$migrated = true;
+			// Convert legacy int entries to structured array
+			foreach ($stats[$key]['by_day'] as $day => $val) {
+				if (is_int($val)) {
+					$stats[$key]['by_day'][$day] = [
+						'fbclid' => 0,
+						'other' => (int)$val,
+					];
+					$migrated = true;
+				}
 			}
 
-			// Compute totals
+			if ($before !== $stats[$key]) $migrated = true;
+
 			$totalByDay = self::sumByDay($stats[$key]);
 			$totalAll   = (int)($stats[$key]['_previous'] ?? 0) + $totalByDay;
 
@@ -216,18 +261,20 @@ class PageViewService
 			$stats[$key]['average_per_day'] = $avgPerDay;
 		}
 
-		// Persist migration (if any), plus the computed fields so /stats can read directly
-		self::saveAndClose($fp, $stats);
+		if ($migrated) {
+			self::saveAndClose($fp, $stats);
+		} else {
+			flock($fp, LOCK_UN);
+			fclose($fp);
+		}
 
 		return $stats;
 	}
 
-	/** Raw file contents (no enrichment/migration); use only if you really need the original file state. */
 	public static function rawAll(?string $filePath = null): array
 	{
 		$filePath = self::path($filePath);
 		if (!file_exists($filePath)) return [];
-
 		$data = json_decode(file_get_contents($filePath), true);
 		return is_array($data) ? $data : [];
 	}
