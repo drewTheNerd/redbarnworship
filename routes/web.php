@@ -58,6 +58,16 @@ Route::get('/stats', function () {
             $fbclidSum = 0;
             $otherSum = 0;
 
+            // If there are previous counts, add them as a "virtual first day"
+            $previousCount = (int)($data['_previous'] ?? 0);
+            if ($previousCount > 0) {
+                $days = array_merge(
+                    ['previous' => ['fbclid' => 0, 'other' => $previousCount]],
+                    $days
+                );
+            }
+
+            // Calculate sums
             foreach ($days as $day) {
                 if (is_int($day)) {
                     $otherSum += $day;
@@ -85,7 +95,7 @@ Route::get('/stats', function () {
             ];
         })
         ->sortByDesc('total_all_time')
-        ->values(); // reset index
+        ->values();
 
     return Inertia::render('Stats', [
         'stats' => $computed,

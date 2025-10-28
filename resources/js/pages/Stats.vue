@@ -1,13 +1,25 @@
 <script setup>
-import { computed } from 'vue';
+import { ref, computed } from 'vue';
 
 const props = defineProps({
 	stats: Array
 });
+
+// Sort routes alphabetically
+const sortedStats = computed(() => {
+	return [...props.stats].sort((a, b) => a.route.localeCompare(b.route));
+});
+
+// Track expanded state for each route
+const expanded = ref({});
+
+function toggleExpand(route) {
+	expanded.value[route] = !expanded.value[route];
+}
 </script>
 
 <template>
-	<div class="min-h-screen text-white p-4 max-w-xl mx-auto">
+	<div class="min-h-screen max-w-lg mx-auto text-white p-4">
 		<!-- Logo -->
 		<div class="w-full flex justify-center mb-6">
 			<a href="/" class="w-48">
@@ -19,45 +31,60 @@ const props = defineProps({
 			</a>
 		</div>
 
-		<!-- Title -->
 		<h1 class="text-2xl font-bold text-center mb-8 tracking-wide text-gray-100">
 			Page View Statistics
 		</h1>
 
 		<!-- Stats Cards -->
-		<div v-for="stat in props.stats" :key="stat.route" class="mb-8 border-2 px-4 py-2 rounded-lg border-gray-800">
+		<div
+			v-for="stat in sortedStats"
+			:key="stat.route"
+			class="mb-8 border-2 px-4 py-2 rounded-lg border-gray-800"
+		>
 			<!-- Header -->
-			<div class="flex justify-between items-center mb-3">
-				<h2 class="text-xl font-semibold text-white capitalize">
+			<div class="flex justify-between items-center mb-3 cursor-pointer" @click="toggleExpand(stat.route)">
+				<h2 class="text-xl font-semibold text-white capitalize flex items-center gap-2">
 					{{ stat.route }}
 				</h2>
-				<!-- <div class="text-3xl font-bold text-red-400">
-					{{ stat.total_all_time }}
-				</div> -->
+				<div class="text-xl">
+					<i
+						class="fa-solid fa-chevron-down transition-transform duration-200"
+						:class="expanded[stat.route] ? 'rotate-0' : 'rotate-90'"
+					></i>
+				</div>
 			</div>
 
 			<!-- Table Header -->
-			<div class="grid grid-cols-4 text-sm text-gray-400 mb-2 border-b border-gray-700 pb-1">
-				<div>Date</div>
-				<div class="text-blue-400 text-right">Insta/FB</div>
-				<div class="text-green-400 text-right">Other</div>
-				<div class="text-gray-300 text-right">Total</div>
-			</div>
+			<transition name="fade">
+				<div v-if="expanded[stat.route]" class="grid grid-cols-4 text-sm text-gray-400 mb-2 border-b border-gray-700 pb-1">
+					<div>Date</div>
+					<div class="text-blue-400 text-right">Insta/FB</div>
+					<div class="text-green-400 text-right">Other</div>
+					<div class="text-gray-300 text-right">Total</div>
+				</div>
+			</transition>
 
 			<!-- Daily Breakdown -->
-			<div v-for="(day, date) in stat.by_day" :key="date"
-				class="grid grid-cols-4 text-sm py-1 border-b last:border-red-500 border-gray-800">
-				<div class="font-mono text-gray-300">{{ date }}</div>
-				<div class="text-blue-300 text-right">
-					{{ day.fbclid ?? 0 }}
+			<transition name="fade">
+				<div v-if="expanded[stat.route]">
+					<div
+						v-for="(day, date) in stat.by_day"
+						:key="date"
+						class="grid grid-cols-4 text-sm py-1 border-b last:border-0 border-gray-800"
+					>
+						<div class="font-mono text-gray-300">{{ date }}</div>
+						<div class="text-blue-300 text-right">
+							{{ day.fbclid ?? 0 }}
+						</div>
+						<div class="text-green-300 text-right">
+							{{ day.other ?? (typeof day === 'number' ? day : 0) }}
+						</div>
+						<div class="text-gray-100 text-right font-semibold">
+							{{ (day.fbclid ?? 0) + (day.other ?? (typeof day === 'number' ? day : 0)) }}
+						</div>
+					</div>
 				</div>
-				<div class="text-green-300 text-right">
-					{{ day.other ?? (typeof day === 'number' ? day : 0) }}
-				</div>
-				<div class="text-gray-100 text-right font-semibold">
-					{{ (day.fbclid ?? 0) + (day.other ?? (typeof day === 'number' ? day : 0)) }}
-				</div>
-			</div>
+			</transition>
 
 			<!-- Totals Row -->
 			<div class="grid grid-cols-4 text-sm font-semibold pt-2 border-t border-gray-700 mt-2">
@@ -79,10 +106,12 @@ const props = defineProps({
 </template>
 
 <style scoped>
-summary::-webkit-details-marker {
-	display: none;
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.2s ease;
 }
-summary {
-	list-style: none;
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
 }
 </style>
