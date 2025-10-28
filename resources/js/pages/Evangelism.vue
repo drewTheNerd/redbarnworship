@@ -31,7 +31,7 @@ import { Head, Link } from '@inertiajs/vue3';
                             830 TULLAHOMA DR <br>
                         </span>
                         FRIDAY, OCTOBER 31 <br>
-                        8:00PM TRAINING + WORSHIP <br>
+                        8:00PM WORSHIP + PRAYER <br>
                         10:00PM EVANGELISM <br> ON TOOMER’S 
                     </p>
 

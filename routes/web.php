@@ -8,9 +8,15 @@ use App\Services\PageViewService;
 // ==== ROUTE TRACKING =====
 
 Route::get('/', function () {
-    $visits = PageViewService::track('homeNormalWithLinks');
-    return Inertia::render('HomeNormalWithLinks');
+    $visits = PageViewService::track('evangelism');
+    return Inertia::render('Evangelism');
 })->name('homeNormalWithLinks');
+
+
+// Route::get('/', function () {
+//     $visits = PageViewService::track('homeNormalWithLinks');
+//     return Inertia::render('HomeNormalWithLinks');
+// })->name('homeNormalWithLinks');
 
 
 // album launch
@@ -26,10 +32,10 @@ Route::get('/about', function () {
 })->name('about');
 
 
-// evangalism
-Route::get('/evangalism', function () {
-    return Inertia::render('Evangalism');
-})->name('evangalism');
+// evangelism
+// Route::get('/evangelism', function () {
+//     return Inertia::render('Evangelism');
+// })->name('evangelism');
 
 
 
