@@ -8,8 +8,8 @@ use App\Services\PageViewService;
 // ==== ROUTE TRACKING =====
 
 Route::get('/', function () {
-    return Inertia::render('Evangelism');
-})->middleware('page.track:homeEvangelism')->name('homeEvangelism');
+    return Inertia::render('Greek');
+})->middleware('page.track:homeGreek')->name('homeGreek');
 
 
 // Route::get('/', function () {
@@ -37,9 +37,9 @@ Route::get('/about', function () {
 
 
 // evangelism
-Route::get('/greek', function () {
-    return Inertia::render('Greek');
-})->name('greek');
+// Route::get('/greek', function () {
+//     return Inertia::render('Greek');
+// })->name('greek');
 
 
 

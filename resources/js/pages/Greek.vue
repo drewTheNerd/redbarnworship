@@ -31,8 +31,8 @@ import { Head, Link } from '@inertiajs/vue3';
                 <a href="/" class="w-full px-12 pt-8">
                     <img
                         src="/img/rbw_snu_text.png"
-                        alt="Red Barn Worship Logo"
-                        class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300"
+                        alt="Worship Night. Thursday November 6, 7:30 PM at Sigma Nu. All are welcome."
+                        class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-400"
                     />
                 </a>
 
@@ -132,7 +132,7 @@ import { Head, Link } from '@inertiajs/vue3';
                         <span class="w-36 group-hover:text-black transition">Back At The Barn</span>
                     </a>
 
-                    <div class="h-48"></div>
+                    <div class="h-32"></div>
 
 
 
