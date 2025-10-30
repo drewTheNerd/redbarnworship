@@ -4,38 +4,36 @@ import { Head, Link } from '@inertiajs/vue3';
 
 <template>
     <Head title="">
-        <link rel="preload" as="image" href="/img/evangalism_background.jpg">
+        <link rel="preload" as="image" href="/img/rbw_snu_background.jpg">
     </Head>
 
     <div class="relative min-h-dvh">
         <!-- Background -->
         <div
             class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-80"
-            style="background-image: url('/img/evangalism_background.jpg');"
+            style="background-image: url('/img/rbw_snu_background.jpg');"
         ></div>
 
         <main class="relative z-10">
-            <section class="max-w-sm mx-auto p-2">
+            <section class="max-w-md mx-auto p-2">
                 <a href="/" class="w-full px-12 pt-8">
                     <img
-                        src="/img/RBW_logo_transparent.png"
+                        src="/img/rbw_logo_image.png"
+                        alt="Red Barn Worship Logo"
+                        class="w-1/2 mx-auto h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300"
+                    />
+                </a>
+
+                <a href="/" class="w-full px-12 pt-8">
+                    <img
+                        src="/img/rbw_snu_text.png"
                         alt="Red Barn Worship Logo"
                         class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300"
                     />
                 </a>
 
-                <div class="w-full text-white/90 text-center pb-4">
-                    <p class="text-2xl/7 text-left px-4 font-helvetica font-regular opacity-0 animate-fade-in delay-400">
-                        <span class="font-semibold">
-                            EVANGELISM NIGHT. <br>
-                            830 TULLAHOMA DR <br>
-                        </span>
-                        FRIDAY, OCTOBER 31 <br>
-                        8:00PM WORSHIP + PRAYER <br>
-                        10:00PM EVANGELISM <br> ON TOOMER’S 
-                    </p>
-
-                    <p class="text-md px-4 mt-2 font-helvetica font-regular opacity-0 animate-fade-in delay-500 italic text-left">
+                <div class="w-full text-white/70 text-center pb-4">
+                    <p class="text-md px-4 font-helvetica font-regular opacity-0 animate-fade-in delay-500 italic">
                         More details on Instagram/GroupMe!
                     </p>
                 </div>
@@ -61,7 +59,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     </a>
 
                     <a 
-                        href="https://maps.app.goo.gl/esxQW2fPx6ucHim98"
+                        href="https://maps.app.goo.gl/ZqVbw1DWruMmXiCG6"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-800 group"
                     >

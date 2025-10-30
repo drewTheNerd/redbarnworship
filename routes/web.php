@@ -36,6 +36,12 @@ Route::get('/about', function () {
 // })->name('evangelism');
 
 
+// evangelism
+Route::get('/greek', function () {
+    return Inertia::render('Greek');
+})->name('greek');
+
+
 
 // // admin stats
 // Route::get('/stats', function () {
