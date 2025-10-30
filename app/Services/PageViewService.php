@@ -48,7 +48,9 @@ class PageViewService
 				if (is_int($count)) {
 					$total += $count;
 				} elseif (is_array($count)) {
-					$total += (int)($count['fbclid'] ?? 0) + (int)($count['other'] ?? 0);
+					$total += (int)($count['fbclid'] ?? 0)
+						+ (int)($count['qr'] ?? 0)
+						+ (int)($count['other'] ?? 0);
 				}
 			}
 		}
@@ -63,7 +65,9 @@ class PageViewService
 				if (is_int($count)) {
 					$sum += $count;
 				} elseif (is_array($count)) {
-					$sum += (int)($count['fbclid'] ?? 0) + (int)($count['other'] ?? 0);
+					$sum += (int)($count['fbclid'] ?? 0)
+						+ (int)($count['qr'] ?? 0)
+						+ (int)($count['other'] ?? 0);
 				}
 			}
 		}
@@ -109,7 +113,7 @@ class PageViewService
 	}
 
 	// Increment and return total all-time count for a key
-	public static function track(string $key, bool $hasFbclid = false, ?string $filePath = null): int
+	public static function track(string $key, bool $hasFbclid = false, bool $hasQr = false, ?string $filePath = null): int
 	{
 		$filePath = self::path($filePath);
 		[$stats, $fp] = self::load($filePath);
@@ -125,14 +129,21 @@ class PageViewService
 
 		// Backward compatibility: convert int to structured array if needed
 		if (!isset($byDay[$today])) {
-			$byDay[$today] = ['fbclid' => 0, 'other' => 0];
+			$byDay[$today] = ['fbclid' => 0, 'qr' => 0, 'other' => 0];
 		} elseif (is_int($byDay[$today])) {
 			$old = (int)$byDay[$today];
-			$byDay[$today] = ['fbclid' => 0, 'other' => $old];
+			$byDay[$today] = ['fbclid' => 0, 'qr' => 0, 'other' => $old];
+		} else {
+			// Make sure new field exists
+			if (!array_key_exists('qr', $byDay[$today])) {
+				$byDay[$today]['qr'] = 0;
+			}
 		}
 
 		if ($hasFbclid) {
 			$byDay[$today]['fbclid']++;
+		} elseif ($hasQr) {
+			$byDay[$today]['qr']++;
 		} else {
 			$byDay[$today]['other']++;
 		}

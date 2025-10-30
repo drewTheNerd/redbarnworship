@@ -56,11 +56,15 @@ function toggleExpand(route) {
 
 			<!-- Table Header -->
 			<transition name="fade">
-				<div v-if="expanded[stat.route]" class="grid grid-cols-4 text-sm text-gray-400 mb-2 border-b border-gray-700 pb-1">
-					<div>Date</div>
-					<div class="text-blue-400 text-right">Insta/FB</div>
-					<div class="text-green-400 text-right">Other</div>
-					<div class="text-gray-300 text-right">Total</div>
+				<div
+					v-if="expanded[stat.route]"
+					class="flex text-sm text-gray-400 mb-2 border-b border-gray-700 pb-1"
+				>
+					<div class="flex-1">Date</div>
+					<div class="w-14 text-right text-blue-400">Insta/FB</div>
+					<div class="w-14 text-right text-purple-400">QR</div>
+					<div class="w-14 text-right text-green-400">Other</div>
+					<div class="w-14 text-right text-gray-300">Total</div>
 				</div>
 			</transition>
 
@@ -70,37 +74,43 @@ function toggleExpand(route) {
 					<div
 						v-for="(day, date) in stat.by_day"
 						:key="date"
-						class="grid grid-cols-4 text-sm py-1 border-b last:border-0 border-gray-800"
+						class="flex text-sm py-1 border-b last:border-0 border-gray-800"
 					>
-						<div class="font-mono text-gray-300">{{ date }}</div>
-						<div class="text-blue-300 text-right">
+						<div class="flex-1 font-mono text-gray-300 truncate">{{ date }}</div>
+						<div class="w-14 text-blue-300 text-right">
 							{{ day.fbclid ?? 0 }}
 						</div>
-						<div class="text-green-300 text-right">
+						<div class="w-14 text-purple-300 text-right">
+							{{ day.qr ?? 0 }}
+						</div>
+						<div class="w-14 text-green-300 text-right">
 							{{ day.other ?? (typeof day === 'number' ? day : 0) }}
 						</div>
-						<div class="text-gray-100 text-right font-semibold">
-							{{ (day.fbclid ?? 0) + (day.other ?? (typeof day === 'number' ? day : 0)) }}
+						<div class="w-14 text-gray-100 text-right font-semibold">
+							{{ (day.fbclid ?? 0) + (day.qr ?? 0) + (day.other ?? (typeof day === 'number' ? day : 0)) }}
 						</div>
 					</div>
 				</div>
 			</transition>
 
 			<!-- Totals Row -->
-			<div class="grid grid-cols-4 text-sm font-semibold pt-2 border-t border-gray-700 mt-2">
-				<div class="text-gray-400">Totals</div>
-				<div class="text-blue-400 text-right">{{ stat.fbclid_sum }}</div>
-				<div class="text-green-400 text-right">{{ stat.other_sum }}</div>
-				<div class="text-red-500 text-right">{{ stat.total_all_time }}</div>
+			<div class="flex text-sm font-semibold pt-2 border-t border-gray-700 mt-2">
+				<div class="flex-1 text-gray-400">Totals</div>
+				<div class="w-14 text-right text-blue-400">{{ stat.fbclid_sum }}</div>
+				<div class="w-14 text-right text-purple-400">{{ stat.qr_sum }}</div>
+				<div class="w-14 text-right text-green-400">{{ stat.other_sum }}</div>
+				<div class="w-14 text-right text-red-500">{{ stat.total_all_time }}</div>
 			</div>
 
 			<!-- Averages Row -->
-			<div class="grid grid-cols-4 text-sm font-semibold pt-2 mt-2 border-t border-gray-700">
-				<div class="text-gray-400">Avg / Day</div>
-				<div class="text-blue-400 text-right">{{ stat.avg_fbclid }}</div>
-				<div class="text-green-400 text-right">{{ stat.avg_other }}</div>
-				<div class="text-gray-200 text-right">{{ stat.avg_total }}</div>
+			<div class="flex text-sm font-semibold pt-2 mt-2 border-t border-gray-700">
+				<div class="flex-1 text-gray-400">Avg / Day</div>
+				<div class="w-14 text-right text-blue-400">{{ stat.avg_fbclid }}</div>
+				<div class="w-14 text-right text-purple-400">{{ stat.avg_qr }}</div>
+				<div class="w-14 text-right text-green-400">{{ stat.avg_other }}</div>
+				<div class="w-14 text-right text-gray-200">{{ stat.avg_total }}</div>
 			</div>
+
 		</div>
 	</div>
 </template>

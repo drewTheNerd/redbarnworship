@@ -12,7 +12,9 @@ class PageTrackMiddleware
         $response = $next($request);
 
         $hasFbclid = $request->has('fbclid');
-        PageViewService::track($pageKey, $hasFbclid);
+        $hasQr = $request->query('utm_source') === 'qr_code';
+
+        PageViewService::track($pageKey, $hasFbclid, $hasQr);
 
         return $response;
     }

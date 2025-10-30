@@ -62,13 +62,14 @@ Route::get('/stats', function () {
         ->map(function ($data, $routeName) {
             $days = $data['by_day'] ?? [];
             $fbclidSum = 0;
+            $qrSum = 0;
             $otherSum = 0;
 
-            // If there are previous counts, add them as a "virtual first day"
+            // Add a virtual "previous" day for legacy totals
             $previousCount = (int)($data['_previous'] ?? 0);
             if ($previousCount > 0) {
                 $days = array_merge(
-                    ['previous' => ['fbclid' => 0, 'other' => $previousCount]],
+                    ['previous' => ['fbclid' => 0, 'qr' => 0, 'other' => $previousCount]],
                     $days
                 );
             }
@@ -79,22 +80,26 @@ Route::get('/stats', function () {
                     $otherSum += $day;
                 } else {
                     $fbclidSum += $day['fbclid'] ?? 0;
+                    $qrSum += $day['qr'] ?? 0;
                     $otherSum += $day['other'] ?? 0;
                 }
             }
 
             $totalDays = max(count($days), 1); // avoid div by zero
             $avgFbclid = round($fbclidSum / $totalDays, 2);
+            $avgQr = round($qrSum / $totalDays, 2);
             $avgOther = round($otherSum / $totalDays, 2);
-            $avgTotal = round(($fbclidSum + $otherSum) / $totalDays, 2);
+            $avgTotal = round(($fbclidSum + $qrSum + $otherSum) / $totalDays, 2);
 
             return [
                 'route' => $routeName,
                 'total_all_time' => $data['total_all_time'] ?? 0,
                 'avg_fbclid' => $avgFbclid,
+                'avg_qr' => $avgQr,
                 'avg_other' => $avgOther,
                 'avg_total' => $avgTotal,
                 'fbclid_sum' => $fbclidSum,
+                'qr_sum' => $qrSum,
                 'other_sum' => $otherSum,
                 'days_count' => $totalDays,
                 'by_day' => $days,
