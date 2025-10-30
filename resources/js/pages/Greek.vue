@@ -24,7 +24,6 @@ import { Head, Link } from '@inertiajs/vue3';
                     <img
                         src="/img/rbw_logo_image.png"
                         alt="Red Barn Worship Logo"
-                        class="w-1/2 mx-auto h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300"
                         class="w-1/2 mx-auto h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-800"
                     />
                 </a>
