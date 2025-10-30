@@ -29,6 +29,16 @@ Route::get('/about', function () {
     return Inertia::render('About');
 })->middleware('page.track:about')->name('about');
 
+// instagram
+Route::get('/instagram', function () {
+    return redirect('https://www.instagram.com/redbarnworship/');
+})->middleware('page.track:instagramRedirect')->name('instagramRedirect');
+
+// groupme
+Route::get('/groupme', function () {
+    return redirect('https://groupme.com/join_group/102740926/1pPZSsMo');
+})->middleware('page.track:groupmeRedirect')->name('groupmeRedirect');
+
 
 // evangelism
 // Route::get('/evangelism', function () {
