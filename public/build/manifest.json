@@ -4,7 +4,7 @@
     "name": "_plugin-vue_export-helper"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-ScXAHTWI.js",
+    "file": "assets/app-B_2BjJag.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -12,6 +12,7 @@
       "resources/js/pages/About.vue",
       "resources/js/pages/Album.vue",
       "resources/js/pages/Evangelism.vue",
+      "resources/js/pages/Greek.vue",
       "resources/js/pages/HomeNormalWithLinks.vue",
       "resources/js/pages/ItsARedBarn.vue",
       "resources/js/pages/Linktree.vue",
@@ -20,11 +21,11 @@
       "resources/js/pages/Stats.vue"
     ],
     "css": [
-      "assets/app-DIBj8M-1.css"
+      "assets/app-ed_7_RBg.css"
     ]
   },
   "resources/js/pages/About.vue": {
-    "file": "assets/About-Ww4NdP6k.js",
+    "file": "assets/About-DLRKWLNw.js",
     "name": "About",
     "src": "resources/js/pages/About.vue",
     "isDynamicEntry": true,
@@ -37,7 +38,7 @@
     ]
   },
   "resources/js/pages/Album.vue": {
-    "file": "assets/Album-B-FFcV0G.js",
+    "file": "assets/Album-8n57X0GA.js",
     "name": "Album",
     "src": "resources/js/pages/Album.vue",
     "isDynamicEntry": true,
@@ -50,7 +51,7 @@
     ]
   },
   "resources/js/pages/Evangelism.vue": {
-    "file": "assets/Evangelism-BgHBXm9V.js",
+    "file": "assets/Evangelism-BlIqS6cI.js",
     "name": "Evangelism",
     "src": "resources/js/pages/Evangelism.vue",
     "isDynamicEntry": true,
@@ -59,11 +60,24 @@
       "__plugin-vue_export-helper-DlAUqK2U.js"
     ],
     "css": [
-      "assets/Evangelism-BrBkqnr7.css"
+      "assets/Evangelism-INS1KeRW.css"
+    ]
+  },
+  "resources/js/pages/Greek.vue": {
+    "file": "assets/Greek-DlSWH_rq.js",
+    "name": "Greek",
+    "src": "resources/js/pages/Greek.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.ts",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ],
+    "css": [
+      "assets/Greek-D-a5XW5J.css"
     ]
   },
   "resources/js/pages/HomeNormalWithLinks.vue": {
-    "file": "assets/HomeNormalWithLinks-Drybw8bs.js",
+    "file": "assets/HomeNormalWithLinks-gQWDe-Bv.js",
     "name": "HomeNormalWithLinks",
     "src": "resources/js/pages/HomeNormalWithLinks.vue",
     "isDynamicEntry": true,
@@ -76,7 +90,7 @@
     ]
   },
   "resources/js/pages/ItsARedBarn.vue": {
-    "file": "assets/ItsARedBarn-BMZHE5L8.js",
+    "file": "assets/ItsARedBarn-D9kNNlrD.js",
     "name": "ItsARedBarn",
     "src": "resources/js/pages/ItsARedBarn.vue",
     "isDynamicEntry": true,
@@ -85,7 +99,7 @@
     ]
   },
   "resources/js/pages/Linktree.vue": {
-    "file": "assets/Linktree-BlLtscyd.js",
+    "file": "assets/Linktree-BcFFf6ls.js",
     "name": "Linktree",
     "src": "resources/js/pages/Linktree.vue",
     "isDynamicEntry": true,
@@ -98,7 +112,7 @@
     ]
   },
   "resources/js/pages/Prayer.vue": {
-    "file": "assets/Prayer-CKVgaMW8.js",
+    "file": "assets/Prayer-CZn9X89W.js",
     "name": "Prayer",
     "src": "resources/js/pages/Prayer.vue",
     "isDynamicEntry": true,
@@ -111,7 +125,7 @@
     ]
   },
   "resources/js/pages/Preorder.vue": {
-    "file": "assets/Preorder-Dkjv14uJ.js",
+    "file": "assets/Preorder-CpthWrJY.js",
     "name": "Preorder",
     "src": "resources/js/pages/Preorder.vue",
     "isDynamicEntry": true,
@@ -124,7 +138,7 @@
     ]
   },
   "resources/js/pages/Stats.vue": {
-    "file": "assets/Stats-D6G3g_p-.js",
+    "file": "assets/Stats-NGX1LrS6.js",
     "name": "Stats",
     "src": "resources/js/pages/Stats.vue",
     "isDynamicEntry": true,
