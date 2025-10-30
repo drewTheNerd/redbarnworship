@@ -26,8 +26,8 @@ Route::get('/album', function () {
 
 // about
 Route::get('/about', function () {
-    return redirect('/');
-})->name('about');
+    return Inertia::render('About');
+})->middleware('page.track:about')->name('about');
 
 
 // evangelism

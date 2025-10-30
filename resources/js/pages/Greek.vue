@@ -25,6 +25,7 @@ import { Head, Link } from '@inertiajs/vue3';
                         src="/img/rbw_logo_image.png"
                         alt="Red Barn Worship Logo"
                         class="w-1/2 mx-auto h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300"
+                        class="w-1/2 mx-auto h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-800"
                     />
                 </a>
 
@@ -32,12 +33,12 @@ import { Head, Link } from '@inertiajs/vue3';
                     <img
                         src="/img/rbw_snu_text.png"
                         alt="Worship Night. Thursday November 6, 7:30 PM at Sigma Nu. All are welcome."
-                        class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-400"
+                        class="w-full h-full object-cover rounded-2xl opacity-0 scale-95 animate-fade-in delay-300 duration-300"
                     />
                 </a>
 
                 <div class="w-full text-white/70 text-center pb-4">
-                    <p class="text-md px-4 font-helvetica font-regular opacity-0 animate-fade-in delay-500 italic">
+                    <p class="text-md px-4 font-helvetica font-regular opacity-0 animate-fade-in delay-800 italic">
                         More details on Instagram/GroupMe!
                     </p>
                 </div>
@@ -47,7 +48,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     <a 
                         href="https://www.instagram.com/redbarnworship/"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-600 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
                     >
                         <img src="/img/instagram_logo.jpg" alt="Instagram" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Instagram</span>
@@ -56,7 +57,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     <a 
                         href="https://groupme.com/join_group/102740926/1pPZSsMo"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-700 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000 group"
                     >
                         <img src="/img/groupme_logo_2.jpg" alt="GroupMe" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">GroupMe</span>
@@ -65,29 +66,37 @@ import { Head, Link } from '@inertiajs/vue3';
                     <a 
                         href="https://maps.app.goo.gl/ZqVbw1DWruMmXiCG6"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-800 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1100 group"
                     >
                         <img src="/img/google_maps_icon.jpg" alt="Google Maps" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Directions</span>
                     </a>
 
-                    <a 
-                        href="/album"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
-                    >
-                        <img src="/img/album_cover.jpg" alt="Album" class="w-10 h-10 rounded-full" />
-                        <span class="w-36 group-hover:text-black transition">At The Arena (Live)</span>
-                    </a>
 
-
-                    <h2
+                    <!-- h2
                         class="text-white text-md uppercase tracking-widest font-medium mt-3
                          transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-800"
                     >
-                        Contact
-                    </h2>
+                        About Us
+                    </h2> -->
 
                     <a 
+                        href="/album"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1300 group mt-6"
+                    >
+                        <img src="/img/album_cover.jpg" alt="Album" class="w-10 h-10 rounded-full" />
+                        <span class="w-36 group-hover:text-black transition">Live Album</span>
+                    </a>
+
+                    <a 
+                        href="/about"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1500 group mt-6"
+                    >
+                        <!-- <img src="/img/dm_icon.jpg" alt="Instagram DM Icon" class="w-10 h-10 rounded-full" /> -->
+                        <span class="w-58 group-hover:text-black transition py-1">About Red Barn Worship <i class="fa-solid fa-chevron-right pl-2"></i></span>
+                    </a>
+
+                    <!-- <a 
                         href="https://ig.me/m/redbarnworship"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-900 group"
@@ -103,11 +112,11 @@ import { Head, Link } from '@inertiajs/vue3';
                     >
                         <img src="/img/email_icon.jpg" alt="Email Icon" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Email Us</span>
-                    </a>
+                    </a> -->
 
 
 
-                    <h2
+                    <!-- <h2
                         class="text-white text-md uppercase tracking-widest font-medium mt-3
                          transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1000"
                     >
@@ -130,7 +139,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     >
                         <img src="/img/back_at_the_barn.jpg" alt="Back At The Barn Photo" class="w-10 h-10 rounded-full" />
                         <span class="w-36 group-hover:text-black transition">Back At The Barn</span>
-                    </a>
+                    </a> -->
 
                     <div class="h-32"></div>
 
