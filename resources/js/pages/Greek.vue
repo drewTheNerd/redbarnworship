@@ -5,6 +5,10 @@ import { Head, Link } from '@inertiajs/vue3';
 <template>
     <Head title="">
         <link rel="preload" as="image" href="/img/rbw_snu_background.jpg">
+
+        <!-- apple styles -->
+        <meta name="theme-color" content="#1d3044">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
     </Head>
 
     <div class="relative min-h-dvh">
