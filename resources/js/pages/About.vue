@@ -95,7 +95,7 @@ import { Head, Link } from '@inertiajs/vue3';
                     </h2>
 
                     <a 
-                        href="https://www.dropbox.com/scl/fo/ynz8r0xxb8vregrx5423y/AGHCPrYHJoyLU27OFaITuPM?rlkey=ufubzyl28to1gm1ltat3wzue7&st=9kh3nin8&dl=0"
+                        href="https://www.dropbox.com/scl/fo/9dzhhgzlxpbcw5n97786l/AD86lEjD9jMHSDA-r-C-XXw?dl=0&e=1&rlkey=g972edn3kaklbz1md7vw0mhzw&st=w4px6hz3"
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1100 group"
                     >
