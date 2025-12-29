@@ -7,15 +7,15 @@ use App\Services\PageViewService;
 
 // ==== ROUTE TRACKING =====
 
-Route::get('/', function () {
-    return Inertia::render('Greek');
-})->middleware('page.track:homeGreek')->name('homeGreek');
-
-
 // Route::get('/', function () {
-//     $visits = PageViewService::track('homeNormalWithLinks');
-//     return Inertia::render('HomeNormalWithLinks');
-// })->name('homeNormalWithLinks');
+//     return Inertia::render('Greek');
+// })->middleware('page.track:homeGreek')->name('homeGreek');
+
+
+Route::get('/', function () {
+    $visits = PageViewService::track('homeNormalWithLinks');
+    return Inertia::render('HomeNormalWithLinks');
+})->middleware('page.track:homeNormalWithLinks')->name('homeNormalWithLinks');
 
 
 // album launch

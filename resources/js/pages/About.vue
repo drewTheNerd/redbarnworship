@@ -99,16 +99,25 @@ import { Head, Link } from '@inertiajs/vue3';
                         target="_blank"
                         class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1100 group"
                     >
-                        <img src="/img/sylly_week_photos_cover.jpg" alt="Sylly Week Photo" class="w-10 h-10 rounded-full" />
+                        <img src="/img/sigma_nu_photos_cover.jpg" alt="Sigma Nu Photo" class="w-10 h-10 rounded-full object-cover" />
+                        <span class="w-36 group-hover:text-black transition">Sigma Nu</span>
+                    </a>
+
+                    <a 
+                        href="https://www.dropbox.com/scl/fo/ynz8r0xxb8vregrx5423y/AGHCPrYHJoyLU27OFaITuPM?rlkey=ufubzyl28to1gm1ltat3wzue7&st=9kh3nin8&dl=0"
+                        target="_blank"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1200 group"
+                    >
+                        <img src="/img/sylly_week_photos_cover.jpg" alt="Sylly Week Photo" class="w-10 h-10 rounded-full object-cover" />
                         <span class="w-36 group-hover:text-black transition">Sylly Week</span>
                     </a>
 
                     <a 
                         href="https://drive.google.com/drive/folders/1pp20YmiXDiaWfrD4koRAjY0IaVXnZY0W"
                         target="_blank"
-                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1200 group"
+                        class="bg-white rounded-full text-md text-black/70 tracking-wide py-1 px-1 inline-flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 ease-in-out opacity-0 animate-slide-up delay-1300 group"
                     >
-                        <img src="/img/back_at_the_barn.jpg" alt="Back At The Barn Photo" class="w-10 h-10 rounded-full" />
+                        <img src="/img/back_at_the_barn.jpg" alt="Back At The Barn Photo" class="w-10 h-10 rounded-full object-cover" />
                         <span class="w-36 group-hover:text-black transition">Back At The Barn</span>
                     </a>
 
